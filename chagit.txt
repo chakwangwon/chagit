@@ -1,23 +1,45 @@
-echo 텍스트 파일.명
+*참고사이트
+https://thebook.io/080212/0017/
+https://wikidocs.net/book/14452
+
+
+https://git-scm.com/downloads/win
+Git for Windows/x64 Setup. 다운
+main 으로 설정변경
+혹시 마스터로 설치된경우 
+git config --global init.defaultBranch main
+
+https://www.sourcetreeapp.com/
+소스트리 다운 설치
+git config --global user.name "이름"
+git config --global user.email  "이메일"
+
+mkdir 폴더명  -->생성 
+폴더이동 후 
+  git init 깃 사용
+
+echo "텍스트" 파일.명
 git status  --> 파일 확인
 cat 파일.명  --> 파일 내용확인
 git add 파일.명  --> 워킹에서 스테지로 이동 
 git rm --cached a.txt --> 스테이지에서 워킹으로 이동
 
-git commit java.txt -m java commit --> 스테지에서 커밋으로 이동 저장 
+git commit java.txt -m "java commit" --> 스테지에서 커밋으로 이동 저장 
 git chechout 해쉬코드  --> 저장된 커밋 돌리기
 code .gitignore 깃 사용안할파일 추리기
-git clone 링크 다른사람거 펌해서 깔기
 
-git commit --allow-empty-message -m  커밋 메시지를 작성하지 않음
+git clone https://github.com/jinyphp/jiny.git 다른사람거 펌해서 깔기
+
+git commit --allow-empty-message -m "" 커밋 메시지를 작성하지 않음
 
 최초 링크등록 
 git remote add origin https://github.com/chakwangwon/kdstudy05.git
-git push -u origin main -- 깃허브에 등록 
+git push -u origin main -- 깃허브에 등록
 
 이후 작업시 단축 
 git remote -v
 git push -깃허브등록
+
 
 git clone https://github.com/chakwangwon/kdstudy05.git . 최초  복제
 git pull 추후 변경사항 다운로드
