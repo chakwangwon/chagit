@@ -1,0 +1,15 @@
+최초 링크등록 
+git remote add origin https://github.com/chakwangwon/kdstudy05.git
+git push -u origin main -- 깃허브에 등록
+
+이후 작업시 단축 
+git remote -v
+git push -깃허브등록
+
+git clone https://github.com/chakwangwon/kdstudy05.git . 최초  복제
+git pull 추후 변경사항 다운로드
+
+
+git reset --soft  스테이로이동
+git reset --mixed 워킹이로 이동
+git reset --hard 로그 삭제
