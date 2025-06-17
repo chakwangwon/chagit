@@ -38,6 +38,8 @@ git push -u origin main -- 깃허브에 등록
 
 이후 작업시 단축 
 git remote -v
+git remote show origin  --> HEAD branch: (unknown)
+
 git push -깃허브등록
 
 
@@ -51,3 +53,20 @@ git reset --hard 로그 삭제
 
 git fetch --> 다른사람과 작업시 로그까지 카피
 git merge origin/main  --> fetch후 반듯이 실행
+
+git branch 브랜치이름  --> 생성 
+
+git checkout footer 브런치이동명령
+git seitch feature  브런치 이동명령 
+git branch -v
+git checkout  --track origin/function 클론곳에서 브런치 가져오기
+git checkout -b aaa origin/aaa  깃허브에 만든  브런치를 생성할때
+git branch -u origin/bbb  브런치를 만들고  깃허브의 bbb이름으로 연동
+
+git branch -d hotfix 삭제
+git branch -D hotfix 오류무시 삭제 
+git push origin --delete aaa 삭제
+
+git stash  커밋전 임시저장
+git stash list 임시저장된 리스트 확인
+git stash pop 다시꺼내오기
