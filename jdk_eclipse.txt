@@ -19,7 +19,7 @@ jdk 버전 정리
 JAVA_HOME C:\Program Files\Java\jdk-17
 
 고급시스템설정 -> 환경변수-> 시스템변수 - path ->편집 
-path  C:\Program Files\Common Files\Oracle\Java\javapath
+C:\Program Files\Common Files\Oracle\Java\javapath
 %JAVA_HOME%\bin --추가
 
 CLASSPATH %JAVA_HOME%\lib --추가
