@@ -1,0 +1,36 @@
+https://mvnrepository.com/
+spring-boot-starter-web 검색  카피 후 
+pom.xml  열고 <dependencies> 사이에 붙여넣기 </dependencies>
+
+
+<!-- jsp 의존성 구문 -->
+<dependency>
+	<groupId>org.glassfish.web</groupId>
+	<artifactId>jakarta.servlet.jsp.jstl</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.apache.tomcat.embed</groupId>
+	<artifactId>tomcat-embed-jasper</artifactId>
+</dependency>
+
+
+상단메뉴 help --> eclipse market..  선택 jsp검색  web developer - install
+상단메뉴 window --> web 인코딩 변경
+
+main --> webapp -> WEB-INF -> views 폴더생성
+
+
+----- application.properties
+spring.application.name=ex00
+
+# 기본포트 변경 .( 기본값 : 8080)->8888 포트변경
+server.port=8888
+
+# jsp경로설정
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=.jsp
+------
+
+
+
+
