@@ -1,8 +1,33 @@
 https://mvnrepository.com/
 spring-boot-starter-web 검색  카피 후 
+spring-boot-starter-jdbc -->3.5.3
+mysql-connector-j -->8.2.0
+
 pom.xml  열고 <dependencies> 사이에 붙여넣기 </dependencies>
 
-
+<!-- 기본적인 웹애플리케이션을 개발하기 위한 라이브러리 (rest,api,mvc --> 
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-test</artifactId>
+	<scope>test</scope>
+</dependency>
+<!-- 리스트타트 자동-->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-devtools</artifactId>
+	<scope>runtime</scope>
+	<optional>true</optional>
+</dependency>
+<!-- 롬북 get/set -->
+<dependency>
+	<groupId>org.projectlombok</groupId>
+	<artifactId>lombok</artifactId>
+	<optional>true</optional>
+</dependency>
 <!-- jsp 의존성 구문 -->
 <dependency>
 	<groupId>org.glassfish.web</groupId>
@@ -13,24 +38,82 @@ pom.xml  열고 <dependencies> 사이에 붙여넣기 </dependencies>
 	<artifactId>tomcat-embed-jasper</artifactId>
 </dependency>
 
+<dependency>
+         <groupId>jakarta.servlet</groupId>
+         <artifactId>jakarta.servlet-api</artifactId>
+</dependency>
+        
+ <dependency>
+	<groupId>jakarta.servlet.jsp.jstl</groupId>
+	 <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+</dependency>
+
+<!-- 데이타베이스를 연동하기 위한 라이브러리 -->
+<dependency>
+	<groupId>org.mybatis.spring.boot</groupId>
+	<artifactId>mybatis-spring-boot-starter</artifactId>
+	<version>3.0.3</version>
+</dependency>
+<!-- 스프링에서 데이타베이스 연결,SQL실행, 크랜잭션 관리등을 쉭게 구현해주는 라이브러리 -->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	 <artifactId>spring-boot-starter-jdbc</artifactId>
+</dependency>
+<!-- mysql을 접속하기 위한 라이브러리 -->
+<dependency>
+	 <groupId>com.mysql</groupId>
+	<artifactId>mysql-connector-j</artifactId>
+</dependency>
 
 상단메뉴 help --> eclipse market..  선택 jsp검색  web developer - install
 상단메뉴 window --> web 인코딩 변경
 
 main --> webapp -> WEB-INF -> views 폴더생성
+views-->board  게시판 추가 폴더생성
+resources --> mapper 폴더생성
 
-
------ application.properties
+*----- application.properties---------- 꼭체크 -----------------
 spring.application.name=ex00
 
 # 기본포트 변경 .( 기본값 : 8080)->8888 포트변경
 server.port=8888
 
+# mysql 연결정보
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.url=jdbc:mysql://localhost:3306/testdb?serverTimezone=Asia/Seoul
+spring.datasource.username=test
+spring.datasource.password=1234
+
+
+# mapper xml파일경로
+mybatis.mapper-locations=classpath:/mapper/*.xml
+
 # jsp경로설정
 spring.mvc.view.prefix=/WEB-INF/views/
 spring.mvc.view.suffix=.jsp
-------
+*------------------------------------------------------------------------
 
+스프링에 lombok 다운로드 후 설치
+https://projectlombok.org/download
+lombok.jar
 
+java -jar 파일명 --> jar파일은 cmd모드에서 압축풀기
 
+데이터베이스 연결 
+-데이타베이스:mysql
+mysql driver
 
+-연동기술 :
+ 1) mybatis
+ 2) jpa
+ 뷰(view) : jsp,thymeleaf 등 
+
+https://mybatis.org/mybatis-3/ko/sqlmap-xml.html
+
+게시판 만들기
+boardMapper.xml
+BoardMapper 인터페이스
+BoardServieImpl 클래스 --> bin 생성 
+BoardController 
+
+win ->  preferences -> general 
