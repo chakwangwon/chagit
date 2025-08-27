@@ -1,0 +1,22 @@
+스프링 부트 프로젝트 구조
+1) 도매인기반 패키지구조-회원기능,상품기능,장바구니기능
+장점 :유지보수및 확장성 용이
+단점:계층별 코드찾기 불편,팀단위 분업 불편(프론트 앤드 ,백엔드,db설계등)
+com.kd.basic
+com.kd.basic.admin
+com.kd.basic.cart
+com.kd.basic.order
+com.kd.basic.product
+com.kd.basic.user --controller ,service,mapper,vo,dto
+
+2) 기능별 패키지 구조
+장점 : 계층구조가 명확 ,팀단위 분업편리.
+단점 : 도메인단위 책임 분산, 유지보수가 조금 
+com.kd.basic.controller
+com.kd.basic.dto
+com.kd.basic.mapper
+com.kd.basic.service
+com.kd.basic.vo
+com.kd.basic.domain
+
+VO 클래스 와 DTO 클래스 차이점
